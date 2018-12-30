@@ -15,7 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Relative.cpp">
+    <Text Include="data.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RelativeProblem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

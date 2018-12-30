@@ -78,5 +78,6 @@ int main()
 		}
 		else puts("-1");
 	}
+	getchar();
 	return 0;
 }

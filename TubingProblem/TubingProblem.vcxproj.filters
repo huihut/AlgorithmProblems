@@ -15,13 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RelativeDataGenerator.cpp">
+    <ClCompile Include="TubingProblem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="data.txt">
+    <None Include="README.md">
       <Filter>资源文件</Filter>
-    </Text>
+    </None>
   </ItemGroup>
 </Project>

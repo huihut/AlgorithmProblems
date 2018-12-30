@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{8CA25E4C-36C2-4ECC-B8F7-C1DE61079649}</ProjectGuid>
-    <RootNamespace>SplayTreeDataGenerator</RootNamespace>
+    <ProjectGuid>{0146F650-DF5F-42AE-9C31-799DC5CE0599}</ProjectGuid>
+    <RootNamespace>TubingProblem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,10 +115,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SplayTreeDataGenerator.cpp" />
+    <ClCompile Include="TubingProblem.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="data.txt" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,7 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ReversePairs.cpp">
+    <Text Include="data.txt">
+      <Filter>资源文件</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ReversePairsProblem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
