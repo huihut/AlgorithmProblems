@@ -1,8 +1,9 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<cstdio>
 
 using namespace std;
 
-int f[5001], m, n, p, x, y;
+int f[20001], m, n, p, x, y;
 
 int find(int x)
 {
