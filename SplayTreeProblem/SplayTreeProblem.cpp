@@ -161,7 +161,9 @@ struct Splay {
 
 int main() {
 	FILE *fp = NULL;
+	FILE *fop = NULL;
 	fp = fopen("data.txt", "r");
+	fop = fopen("file.txt", "w+");
 	if (fp == NULL)
 	{
 		printf("data.txt file could not be found\n");
@@ -184,9 +186,9 @@ int main() {
 		}
 		else {
 			fscanf(fp, "%d%d", &l, &r);
-			printf("%d\n", splay_tree.query(l, r));	//查询l到r的最大值 
+			fprintf(fop, "%d\n", splay_tree.query(l, r));//查询l到r的最大值
 		}
 	}
-	getchar();
+
 	return 0;
 }

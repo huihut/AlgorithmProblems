@@ -12,12 +12,14 @@ int main()
 {
 	std::random_device r;
 	std::default_random_engine e1(r());
-	// 序列长度n 的范围是 [1, 50000] 之间的随机数
-	std::uniform_int_distribution<int> n_range(1, 50000);
-	// 操作次数m 的范围是 [1, 100000] 之间的随机数
-	std::uniform_int_distribution<int> m_range(1, 100000);
+	// 序列长度n 的范围是 [1, 20000] 之间的随机数
+	std::uniform_int_distribution<int> n_range(1, 20000);
+	// 操作次数m 的范围是 [1, 30000] 之间的随机数
+	std::uniform_int_distribution<int> m_range(1, 30000);
 	// 操作选项opt 的范围是 [1, 3] 之间的随机数
 	std::uniform_int_distribution<int> opt_range(1, 3);
+	// 操作1加的数 的范围是 [1, 5000] 之间的随机数
+	std::uniform_int_distribution<int> v_range(1, 5000);
 
 	ofstream outfile("data.txt");
 	if (outfile) {
@@ -27,7 +29,6 @@ int main()
 		// 随机生成 m
 		int m = m_range(e1);
 		outfile << n << " " << m << " ";
-		//cout << n << " " << m << " ";
 
 		for (size_t i = 0; i < m; i++)
 		{
@@ -44,18 +45,15 @@ int main()
 			// 随机生成操作选项opt
 			int opt = opt_range(e1);
 			outfile << opt << " ";
-			//cout << opt << " ";
 
 			if (opt == 1)
 			{
-				int v = n_range(e1);
+				int v = v_range(e1);
 				outfile << l << " " << r << " " << v << " ";
-				//cout << l << " " << r << " " << v << " ";
 			}
 			else
 			{
 				outfile << l << " " << r << " ";
-				//cout << l << " " << r << " ";
 			}
 		}
 		outfile.close();
