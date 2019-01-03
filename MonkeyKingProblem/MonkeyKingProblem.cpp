@@ -46,7 +46,7 @@ int push(int x, int y)
 
 int main()
 {
-	FILE *fp = NULL;	
+	FILE *fp = NULL;
 	FILE *op = NULL;
 	fp = fopen("data.txt", "r");
 	op = fopen("file.txt", "w+");
@@ -78,7 +78,7 @@ int main()
 			int yy = push(pop(y), y);
 			fprintf(op, "%d\n", t[merge(xx, yy)].val);
 		}
-		else puts("-1");
+		else fprintf(op, "-1\n");
 	}
 	return 0;
 }
