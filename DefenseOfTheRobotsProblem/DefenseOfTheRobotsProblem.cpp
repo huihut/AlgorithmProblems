@@ -80,7 +80,9 @@ void dp(int x)
 int main()
 {
 	FILE *fp = NULL;
+	FILE *op = NULL;
 	fp = fopen("data.txt", "r");
+	op = fopen("out.txt", "w+");
 	if (fp == NULL)
 	{
 		printf("data.txt file could not be found\n");
@@ -136,7 +138,6 @@ int main()
 			break;
 		}
 	}
-	cout << ans << endl;
-	getchar();
+	fprintf(op, "%d", ans);
 	return 0;
 }

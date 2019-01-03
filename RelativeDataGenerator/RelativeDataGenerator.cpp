@@ -12,16 +12,18 @@ int main()
 {
 	std::random_device r;
 	std::default_random_engine e1(r());
-	// 人数、亲戚对数 的范围是 [1, 10] 之间的随机数
-	std::uniform_int_distribution<int> total_range(1, 10);
+	// 人数、亲戚对数 的随机数
+	std::uniform_int_distribution<int> n_range(1, 10000);
+	std::uniform_int_distribution<int> m_range(1, 15000);
+	std::uniform_int_distribution<int> q_range(1, 15000);
 
 	ofstream outfile("data.txt");
 	if (outfile) {
 
 		// 随机生成人数
-		int people = total_range(e1);
+		int people = n_range(e1);
 		// 随机生成亲戚关系对数
-		int pair = total_range(e1);
+		int pair = m_range(e1);
 		outfile << people << " " << pair << " ";
 
 		// 在 [1, 人数] 内随机生成亲戚关系
@@ -40,7 +42,7 @@ int main()
 		}
 
 		// 随机生成查询的关系对数
-		int relationship = total_range(e1);
+		int relationship = q_range(e1);
 		outfile << relationship << " ";
 
 		// 查询 relationship 对关系

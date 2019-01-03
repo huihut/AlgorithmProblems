@@ -1,5 +1,7 @@
 # AlgorithmProblems
 
+> 部分问题以文件形式输入输出
+
 * [棋盘覆盖问题](ChessboardCoverageProblem)
 * [背包问题](KnapsackProblem)
 * [冯诺依曼邻居问题](NeumannNeighborProblem)

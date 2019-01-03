@@ -48,7 +48,9 @@ int push(int x, int y)
 int main()
 {
 	FILE *fp = NULL;
+	FILE *op = NULL;
 	fp = fopen("data.txt", "r");
+	op = fopen("out.txt", "w+");
 	if (fp == NULL)
 	{
 		printf("data.txt file could not be found\n");
@@ -75,10 +77,9 @@ int main()
 			int xx = push(pop(x), x);
 			t[y].val /= 2;
 			int yy = push(pop(y), y);
-			printf("%d\n", t[merge(xx, yy)].val);
+			fprintf(op, "%d\n", t[merge(xx, yy)].val);
 		}
-		else puts("-1");
+		else fprintf(op, "-1\n");
 	}
-	getchar();
 	return 0;
 }

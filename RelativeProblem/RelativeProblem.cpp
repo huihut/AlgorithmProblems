@@ -16,7 +16,10 @@ void o(int a, int b) { f[b] = a; }		//把其中一个老祖宗的老祖宗设为另一个老祖宗
 int main()
 {
 	FILE *fp = NULL;
+	FILE *op = NULL;
 	fp = fopen("data.txt", "r");
+	op = fopen("out.txt", "w+");
+
 	if (fp == NULL)
 	{
 		printf("data.txt file could not be found\n");
@@ -37,10 +40,15 @@ int main()
 	for (int i = 1; i <= p; i++)
 	{
 		fscanf(fp, "%d%d", &x, &y);
-		if (find(x) == find(y)) printf("Yes\n");//还要找一遍
-		else printf("No\n");
+		if (find(x) == find(y))
+		{
+			fprintf(op, "Yes\n");
+		}
+		else 
+		{
+			fprintf(op, "No\n");
+		}
 	}
 
-	getchar();
 	return 0;
 }

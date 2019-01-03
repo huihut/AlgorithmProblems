@@ -19,8 +19,8 @@ int main() {
 		std::srand(unsigned(std::time(0)));
 		std::random_device r;
 		std::default_random_engine e1(r());
-		// 生成 [1, 509999] 之间的随机数
-		std::uniform_int_distribution<int> total_range(1, 509999);
+		// 生成 [1, 50000] 之间的随机数
+		std::uniform_int_distribution<int> total_range(1, 50000);
 
 		int size = total_range(e1);
 		outfile << size << " ";

@@ -7,7 +7,9 @@ using namespace std;
 
 int main() {
 	FILE *fp = NULL;
+	FILE *op = NULL;
 	fp = fopen("data.txt", "r");
+	op = fopen("out.txt", "w+");
 	if (fp == NULL)
 	{
 		printf("data.txt file could not be found\n");
@@ -27,14 +29,13 @@ int main() {
 		while (n > 0) {
 			beg = vec.begin();
 			index = (index - 1 + m) % n;
-			printf("%d ", vec[index]);
+			fprintf(op, "%d ", vec[index]);
 			beg += index;
 			if (beg != vec.end())
 				vec.erase(beg);
 			n--;
 		}
 	}
-
-	getchar();
+	
 	return 0;
 }
